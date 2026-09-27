@@ -5,3 +5,6 @@
 
 ARG OMNIGENT_IMAGE=ghcr.io/omnigent-ai/omnigent-server:latest
 FROM ${OMNIGENT_IMAGE}
+
+USER root
+RUN pip install --no-cache-dir 'omnigent[daytona]'
