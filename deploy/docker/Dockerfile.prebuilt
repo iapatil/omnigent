@@ -3,8 +3,5 @@
 # only run `docker build` (Railway, HF Spaces). Override the tag via
 # --build-arg OMNIGENT_IMAGE=ghcr.io/omnigent-ai/omnigent-server:vX.Y.Z.
 
-ARG OMNIGENT_IMAGE=ghcr.io/omnigent-ai/omnigent-server:latest
+ARG OMNIGENT_IMAGE=ghcr.io/omnigent-ai/omnigent-server-modal:latest
 FROM ${OMNIGENT_IMAGE}
-
-USER root
-RUN pip install --no-cache-dir 'omnigent[daytona]'
